@@ -1,0 +1,63 @@
+/* .bg-color-main{
+    background-color: #EEEDEB;
+} */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #DDE6ED;
+    /* background: url('../resources/images/bricks.jpg') no-repeat center center fixed; */
+    background-size: cover;
+    overflow: hidden; /* Hide overflowing parts of the background */
+  }
+.description-container{
+    width:50rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.name {
+    width: 45rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    margin: 0%;
+    font-size: 5rem;
+  }
+.description{
+    width: 35rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: center;
+    font-size: 1.5rem;   
+}
+.content{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (max-width:1000px) {
+    .nav-bar{
+        visibility: hidden;
+    }   
+    .nav-main{
+        visibility: hidden;
+    }  
+    .name{
+        font-size: 3rem;
+    }  
+    .description{
+        font-size:0.72rem;
+        width : 21rem;
+    }
+}

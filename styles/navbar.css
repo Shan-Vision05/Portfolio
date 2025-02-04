@@ -1,0 +1,31 @@
+.nav-bar{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%) translateX(5px);
+    
+    /* background-color: rgba(255, 255, 255, 1); */
+    background-color: rgba(246, 244, 235, 0.5);
+    backdrop-filter: blur(3px);
+    height: 50px;
+    width: 250px;
+    border-radius: 25px;
+
+    box-shadow: 0px 5px 15px gray;
+}
+
+.nav-main{
+    position : fixed;
+    display:flex;
+    justify-content: center   ;
+    gap: 10px;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%) ;
+    
+    height: 90px;
+    width: 270px;
+    padding: 0px 40px;
+
+}
+

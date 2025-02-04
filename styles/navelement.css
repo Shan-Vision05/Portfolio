@@ -1,0 +1,48 @@
+.nav-element{
+    /* background-color: #F6F4EB; */
+    background-color: #9BB0C1;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px lightgray;
+
+    float: left;
+    
+    position: relative;
+    top: 25px;
+    left: 25px;
+    transform: translate(-50%,-50%);
+}
+
+.tool-tip{
+    visibility: hidden;
+    position: relative;
+    width: max-content;
+    font-weight: bolder;
+    padding: 0px 2px;
+    height: 20px;
+    margin: 0%;
+
+    top:-25px;
+    left:50%;
+    transform: translateX(-50%);
+
+    border-radius: 5px ;
+    /* background-color: #C7C8CC; */
+    font-family: Calibri, Arial, sans-serif;
+        
+}
+/* 
+.nav-margin{
+    margin-right: 10px;
+} */
+
+
+.nav-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
