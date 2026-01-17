@@ -224,10 +224,10 @@ ul, ol {
    ===================================================== */
 .theme-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
+    top: 95px;
+    right: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: var(--radius-full);
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -236,6 +236,7 @@ ul, ol {
     align-items: center;
     justify-content: center;
     z-index: var(--z-fixed);
+    cursor: pointer;
     transition: var(--transition-base);
 }
 
@@ -1277,11 +1278,13 @@ ul, ol {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    pointer-events: none;
     transition: var(--transition-base);
 }
 
 .project-card:hover .project-overlay {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .project-links {
@@ -1298,6 +1301,7 @@ ul, ol {
     align-items: center;
     justify-content: center;
     color: var(--color-text);
+    cursor: pointer;
     transition: var(--transition-base);
     transform: translateY(20px);
 }
@@ -1309,6 +1313,7 @@ ul, ol {
 .project-link:hover {
     background: var(--color-primary);
     color: white;
+    transform: translateY(0) scale(1.1);
 }
 
 .project-info {
@@ -1959,6 +1964,8 @@ ul, ol {
     .theme-toggle {
         top: auto;
         bottom: 100px;
+        right: 30px;
+        left: auto;
     }
     
     #home-section {
