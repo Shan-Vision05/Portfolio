@@ -235,7 +235,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Shanmukha Vamshi**
 - LinkedIn: [k-shanmukha-vamshi](https://www.linkedin.com/in/k-shanmukha-vamshi-92b7161a9/)
 - GitHub: [Shan-Vision05](https://github.com/Shan-Vision05)
-- Email: shanmukhavamshi@gmail.com
+- Email: shanmukha.vamshi.k@gmail.com
 
 ---
 

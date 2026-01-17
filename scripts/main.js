@@ -339,55 +339,41 @@ function initContactForm() {
     
     if (!form) return;
     
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Create mailto link with form data
+        const mailtoEmail = 'shanmukha.vamshi.k@gmail.com';
+        const mailtoSubject = encodeURIComponent(`[Portfolio] ${subject}`);
+        const mailtoBody = encodeURIComponent(
+            `Name: ${name}\n` +
+            `Email: ${email}\n\n` +
+            `Message:\n${message}`
+        );
+        
+        const mailtoLink = `mailto:${mailtoEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show success feedback
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Opening Email...';
+        submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
         
-        // Show loading state
-        submitBtn.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span> Sending...';
-        submitBtn.disabled = true;
-        
-        // Get form data
-        const formData = new FormData(form);
-        
-        try {
-            // If you have Formspree configured, uncomment below
-            // const response = await fetch(form.action, {
-            //     method: 'POST',
-            //     body: formData,
-            //     headers: {
-            //         'Accept': 'application/json'
-            //     }
-            // });
-            
-            // Simulate form submission for demo
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Success
-            submitBtn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Message Sent!';
-            submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
             form.reset();
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 3000);
-            
-        } catch (error) {
-            // Error
-            submitBtn.innerHTML = '<span class="material-symbols-outlined">error</span> Error!';
-            submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 3000);
-        }
+        }, 3000);
     });
 }
 

@@ -8,6 +8,6 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability within this portfolio website, please send an email to shanmukhavamshi@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this portfolio website, please send an email to shanmukha.vamshi.k@gmail.com. All security vulnerabilities will be promptly addressed.
 
 Please do not publicly disclose the issue until it has been addressed.
