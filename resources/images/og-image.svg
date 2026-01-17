@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="530" r="200" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="900" cy="100" r="100" fill="rgba(255,255,255,0.05)"/>
+  
+  <!-- Content -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">Shanmukha Vamshi</text>
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="36" fill="rgba(255,255,255,0.9)" text-anchor="middle">Software Engineer | Full Stack Developer</text>
+  
+  <!-- Divider -->
+  <rect x="450" y="370" width="300" height="3" fill="rgba(255,255,255,0.5)" rx="2"/>
+  
+  <!-- Tagline -->
+  <text x="600" y="440" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Building innovative solutions with modern technology</text>
+  
+  <!-- Skills -->
+  <text x="600" y="510" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)" text-anchor="middle">React • Node.js • Python • Machine Learning • AWS</text>
+</svg>

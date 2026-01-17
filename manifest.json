@@ -1,0 +1,19 @@
+{
+  "name": "Shanmukha Vamshi Portfolio",
+  "short_name": "SV Portfolio",
+  "description": "Personal portfolio of Shanmukha Vamshi - Software Engineer & Full Stack Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/resources/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "personal", "developer"]
+}
