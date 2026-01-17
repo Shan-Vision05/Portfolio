@@ -142,11 +142,11 @@ function initTypingEffect() {
     if (!typingElement) return;
     
     const texts = [
-        'Software Engineer',
-        'Full Stack Developer',
-        'ML Enthusiast',
-        'Problem Solver',
-        'Tech Innovator'
+        'AI/ML Engineer',
+        'Computer Vision Specialist',
+        'Deep Learning Researcher',
+        'NLP Enthusiast',
+        'Medical AI Developer'
     ];
     
     let textIndex = 0;
