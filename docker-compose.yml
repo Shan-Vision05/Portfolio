@@ -1,0 +1,11 @@
+# Note: 'version' is obsolete in Compose v2 but kept for v1 compatibility
+
+services:
+  portfolio:
+    build: .
+    container_name: portfolio-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"

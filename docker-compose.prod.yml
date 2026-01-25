@@ -1,0 +1,48 @@
+version: '3.8'
+
+# Production docker-compose with Traefik for SSL
+# Usage: docker-compose -f docker-compose.prod.yml up -d
+
+services:
+  traefik:
+    image: traefik:v2.10
+    container_name: traefik
+    command:
+      - "--api.dashboard=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.email=${ACME_EMAIL}"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt"
+    restart: unless-stopped
+    networks:
+      - web
+
+  portfolio:
+    build: .
+    container_name: portfolio-website
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
+      - "traefik.http.routers.portfolio-http.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.portfolio-http.entrypoints=web"
+      - "traefik.http.routers.portfolio-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: false
