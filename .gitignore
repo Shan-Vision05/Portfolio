@@ -31,5 +31,6 @@ npm-debug.log*
 # Docker - only hide sensitive files
 letsencrypt/
 .env
+docker-compose.prod.yml
 
 DEPLOYMENT.md
