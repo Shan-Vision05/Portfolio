@@ -42,6 +42,8 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/navelement.css">
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -75,24 +77,34 @@
         <span class="material-symbols-outlined moon-icon">dark_mode</span>
     </button>
 
-    <!-- Desktop Navigation -->
-    <nav class="desktop-nav" aria-label="Main navigation">
-        <div class="nav-logo">
-            <a href="#home-section">SV</a>
+    <!-- Floating Navigation Bar -->
+    <div class="nav-bar"></div>
+    <div class="nav-main">
+        <div class="nav-element home">
+            <p class="tool-tip">Home</p>
+            <span class="material-symbols-outlined">home</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home-section" class="nav-link active">Home</a></li>
-            <li><a href="#about-section" class="nav-link">About</a></li>
-            <li><a href="#skills-section" class="nav-link">Skills</a></li>
-            <li><a href="#timeline-section" class="nav-link">Experience</a></li>
-            <li><a href="#projects-section" class="nav-link">Projects</a></li>
-            <li><a href="#contact-section" class="nav-link">Contact</a></li>
-        </ul>
-        <a href="https://drive.google.com/file/d/18LJERH-CQdjI8Al5EqwGQpicBttzfq2K/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-cta">
-            Resume
-            <span class="material-symbols-outlined">open_in_new</span>
-        </a>
-    </nav>
+        <div class="nav-element about">
+            <p class="tool-tip">About</p>
+            <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="nav-element skills">
+            <p class="tool-tip">Skills</p>
+            <span class="material-symbols-outlined">code</span>
+        </div>
+        <div class="nav-element experience">
+            <p class="tool-tip">Experience</p>
+            <span class="material-symbols-outlined">work</span>
+        </div>
+        <div class="nav-element projects">
+            <p class="tool-tip">Projects</p>
+            <span class="material-symbols-outlined">hub</span>
+        </div>
+        <div class="nav-element contact">
+            <p class="tool-tip">Contact</p>
+            <span class="material-symbols-outlined">mail</span>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="section" id="home-section" aria-label="Home">
@@ -1060,6 +1072,8 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/navbar.js"></script>
 </body>
 </html>
