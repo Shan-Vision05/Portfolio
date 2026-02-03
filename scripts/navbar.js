@@ -113,4 +113,10 @@ $(document).ready(function() {
     
     // Update active state on scroll (throttled to improve performance)
     $(window).on('scroll', throttle(updateActiveNav, 100));
+    
+    // Show navbar after loader is hidden
+    setTimeout(function() {
+        $('.nav-bar').addClass('show');
+        $('.nav-main').addClass('show');
+    }, 2000);
 });

@@ -14,6 +14,14 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
     transition: background-color 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-bar.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease 0.3s, visibility 0.5s ease 0.3s;
 }
 
 [data-theme="light"] .nav-bar {
@@ -32,6 +40,27 @@
     right: 45px;
     top: 50%;
     transform: translateY(-50%);
+    
+    width: auto;
+    padding: 20px 0;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-main.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease 0.3s, visibility 0.5s ease 0.3s;
+}
+
+/* Hide floating navbar on tablets and mobile */
+@media (max-width: 1024px) {
+    .nav-bar,
+    .nav-main {
+        display: none !important;
+    }
+}
     
     width: auto;
     padding: 20px 0;

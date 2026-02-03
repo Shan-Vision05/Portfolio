@@ -1979,8 +1979,8 @@ ul, ol {
     }
     
     .theme-toggle {
-        top: auto;
-        bottom: 100px;
+        top: 20px;
+        bottom: auto;
         right: 30px;
         left: auto;
     }
