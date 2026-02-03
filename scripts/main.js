@@ -229,7 +229,7 @@ function initProjectFilters() {
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 
-                if (filter === 'all' || category === filter) {
+                if (filter === 'all' || category.includes(filter)) {
                     card.classList.remove('hidden');
                     card.style.animation = 'fadeUp 0.5s ease forwards';
                 } else {
@@ -238,6 +238,135 @@ function initProjectFilters() {
             });
         });
     });
+    
+    // Initialize project modal
+    initProjectModal();
+}
+
+/* =====================================================
+   PROJECT MODAL
+   ===================================================== */
+function initProjectModal() {
+    const modal = document.getElementById('project-modal');
+    const modalOverlay = document.getElementById('project-modal-overlay');
+    const modalClose = document.getElementById('project-modal-close');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (!modal || !modalOverlay) return;
+    
+    // Category mapping for display
+    const categoryMap = {
+        'cv': 'Computer Vision',
+        'nlp': 'NLP',
+        'ml': 'Machine Learning',
+        'cv nlp': 'CV & NLP',
+        'cv ml': 'CV & ML',
+        'nlp ml': 'NLP & ML'
+    };
+    
+    // Open modal when clicking on project card or view button
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Prevent opening if clicking on external link
+            if (e.target.closest('a[href]')) return;
+            
+            openProjectModal(card);
+        });
+    });
+    
+    function openProjectModal(card) {
+        const data = card.dataset;
+        
+        // Populate modal content
+        document.getElementById('modal-title').textContent = data.title || 'Project';
+        document.getElementById('modal-category').textContent = categoryMap[data.category] || data.category || 'Project';
+        document.getElementById('modal-description').textContent = data.description || '';
+        document.getElementById('modal-github-link').href = data.github || '#';
+        
+        // Handle image
+        const mainImage = document.getElementById('modal-main-image');
+        const imagePlaceholder = document.getElementById('modal-image-placeholder');
+        const placeholderIcon = document.getElementById('modal-placeholder-icon');
+        
+        if (data.image && data.image !== 'undefined') {
+            // Try to load image
+            const img = new Image();
+            img.onload = function() {
+                mainImage.src = data.image;
+                mainImage.style.display = 'block';
+                imagePlaceholder.style.display = 'none';
+            };
+            img.onerror = function() {
+                mainImage.style.display = 'none';
+                imagePlaceholder.style.display = 'flex';
+                placeholderIcon.textContent = data.icon || 'image';
+            };
+            img.src = data.image;
+        } else {
+            mainImage.style.display = 'none';
+            imagePlaceholder.style.display = 'flex';
+            placeholderIcon.textContent = data.icon || 'image';
+        }
+        
+        // Populate features
+        const featuresContainer = document.getElementById('modal-features');
+        featuresContainer.innerHTML = '';
+        if (data.features) {
+            const features = data.features.split('|');
+            features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="material-symbols-outlined">check_circle</span>${feature.trim()}`;
+                featuresContainer.appendChild(li);
+            });
+        }
+        
+        // Populate tech
+        const techContainer = document.getElementById('modal-tech');
+        techContainer.innerHTML = '';
+        if (data.tech) {
+            const techs = data.tech.split('|');
+            techs.forEach(tech => {
+                const span = document.createElement('span');
+                span.textContent = tech.trim();
+                techContainer.appendChild(span);
+            });
+        }
+        
+        // Show modal
+        modal.classList.add('active');
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeProjectModal() {
+        modal.classList.remove('active');
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Close modal events
+    modalClose.addEventListener('click', closeProjectModal);
+    modalCloseBtn.addEventListener('click', closeProjectModal);
+    modalOverlay.addEventListener('click', closeProjectModal);
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeProjectModal();
+        }
+    });
+    
+    // Close on scroll (when modal is active)
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (modal.classList.contains('active')) {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                closeProjectModal();
+            }, 100);
+        }
+    }, { passive: true });
 }
 
 /* =====================================================
