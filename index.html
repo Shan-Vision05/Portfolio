@@ -558,13 +558,14 @@
                 <article class="project-card reveal-up" data-category="cv nlp"
                     data-title="Visual Grounding"
                     data-description="A multimodal deep learning system that localizes regions in images based on natural language descriptions. This project combines state-of-the-art computer vision with NLP to achieve precise visual grounding capabilities. Using a novel co-attention mechanism, the model learns to focus on relevant image regions while processing textual queries, achieving impressive results with limited training data."
-                    data-image="./resources/images/projects/visual-grounding.jpg"
+                    data-image="./resources/images/projects/visual-grounding-archi.png"
                     data-icon="image_search"
                     data-github="https://github.com/Shan-Vision05/Visual-Grounding"
                     data-features="Faster R-CNN backbone for object detection|Co-attention mechanism for multimodal fusion|85.2% Top-5 accuracy on RefCOCOg|Trained with only 20% of available data|Real-time inference capability|Supports complex natural language queries"
                     data-tech="PyTorch|Faster R-CNN|Co-Attention|BERT|CUDA|Python">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="./resources/images/projects/visual-grounding.jpg" alt="Visual Grounding" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <span class="material-symbols-outlined">image_search</span>
                         </div>
                         <div class="project-overlay">
@@ -585,18 +586,52 @@
                         </div>
                     </div>
                 </article>
+
+                <!-- Project 7: F1 Starting Grid (OpenGL) -->
+                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.6s"
+                    data-title="F1 Starting Grid"
+                    data-description="A 3D computer graphics project built with OpenGL, rendering a realistic Formula 1 starting grid scene. Features detailed car models, track surface textures, dynamic lighting, and camera controls for exploring the scene. Demonstrates fundamental concepts in real-time 3D rendering and graphics programming."
+                    data-image="./resources/images/projects/f1-grid.png"
+                    data-icon="sports_motorsports"
+                    data-github="https://github.com/Shan-Vision05/F1-Starting-Grid"
+                    data-features="3D car model rendering|Dynamic lighting system|Texture mapping|Camera movement controls|Track markings and details|Multiple viewing angles"
+                    data-tech="C|OpenGL|GLUT|3D Graphics|Linear Algebra">
+                    <div class="project-image">
+                        <img src="./resources/images/projects/f1-grid.png" alt="F1 Starting Grid" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
+                            <span class="material-symbols-outlined">sports_motorsports</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
+                                    <span class="material-symbols-outlined">open_in_full</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>F1 Starting Grid</h3>
+                        <p>OpenGL demo rendering a 3D Formula 1 starting grid with detailed car models, track markings, and dynamic lighting effects.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>OpenGL</span>
+                            <span>3D Graphics</span>
+                        </div>
+                    </div>
+                </article>
                 
                 <!-- Project 2: Facial Emotion Recognition -->
                 <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.1s"
                     data-title="Facial Emotion Recognition"
                     data-description="A comprehensive deep learning solution for real-time facial emotion detection. The system uses advanced CNN architectures combined with transfer learning from pre-trained models to accurately classify seven distinct emotions from facial images. Optimized for real-time performance, it can process video streams and provide instant emotion feedback."
-                    data-image="./resources/images/projects/emotion-recognition.jpg"
+                    data-image="./resources/images/projects/emotion-recognition.png"
                     data-icon="face"
                     data-github="https://github.com/Shan-Vision05/Facial-Emotion-Recognition"
                     data-features="7 emotion categories detection|Real-time video processing|Transfer learning with VGG16/ResNet|Data augmentation pipeline|Webcam integration support|High accuracy on FER2013 dataset"
                     data-tech="Python|TensorFlow|Keras|CNN|OpenCV|NumPy">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="./resources/images/projects/emotion-recognition.png" alt="Facial Emotion Recognition" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <span class="material-symbols-outlined">face</span>
                         </div>
                         <div class="project-overlay">
@@ -619,7 +654,7 @@
                 </article>
                 
                 <!-- Project 3: Sentiment Prediction -->
-                <article class="project-card reveal-up" data-category="nlp ml" style="--delay: 0.2s"
+                <!-- <article class="project-card reveal-up" data-category="nlp ml" style="--delay: 0.2s"
                     data-title="Sentiment Analysis on Hotel Reviews"
                     data-description="An NLP-powered sentiment analysis system trained on hotel review data to accurately classify customer feedback as positive or negative. The project implements various text preprocessing techniques, feature extraction methods including TF-IDF and word embeddings, and compares multiple classification algorithms to find the optimal model."
                     data-image="./resources/images/projects/sentiment-analysis.jpg"
@@ -628,7 +663,8 @@
                     data-features="Logistic Regression classifier|TF-IDF feature extraction|Comprehensive text preprocessing|Cross-validation evaluation|High precision and recall|Scalable to large datasets"
                     data-tech="Python|scikit-learn|NLTK|Pandas|NumPy|Matplotlib">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="./resources/images/projects/sentiment-analysis.jpg" alt="Sentiment Analysis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <span class="material-symbols-outlined">sentiment_satisfied</span>
                         </div>
                         <div class="project-overlay">
@@ -648,19 +684,22 @@
                             <span>NLP</span>
                         </div>
                     </div>
-                </article>
+                </article> -->
+
+                
                 
                 <!-- Project 4: Text Predictor N-Gram -->
                 <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.3s"
                     data-title="Text Predictor N-Gram"
                     data-description="A natural language processing project implementing statistical language models for text prediction. The system uses bigram and trigram models built from NLTK corpus data to predict the next word in a sequence. It demonstrates fundamental concepts in computational linguistics and probabilistic text generation."
-                    data-image="./resources/images/projects/text-predictor.jpg"
+                    data-image="./resources/images/projects/text-predictor.png"
                     data-icon="edit_note"
                     data-github="https://github.com/Shan-Vision05/TextPredictorNGram"
                     data-features="Bigram and trigram models|NLTK corpus integration|Probability-based predictions|Smoothing techniques|Interactive text completion|Customizable training data"
                     data-tech="Python|NLTK|N-Grams|Probability|Statistics">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="./resources/images/projects/text-predictor.png" alt="Text Predictor N-Gram" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <span class="material-symbols-outlined">edit_note</span>
                         </div>
                         <div class="project-overlay">
@@ -681,50 +720,19 @@
                         </div>
                     </div>
                 </article>
-                
-                <!-- Project 5: ATS - Automated Text Summarization -->
-                <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.4s"
-                    data-title="Automated Text Summarization"
-                    data-description="An advanced NLP system for automatic document summarization. The project implements both extractive and abstractive summarization techniques, using transformer-based models and traditional statistical methods to condense long documents while preserving key information and semantic meaning."
-                    data-image="./resources/images/projects/text-summarization.jpg"
-                    data-icon="summarize"
-                    data-github="https://github.com/Shan-Vision05/ATS"
-                    data-features="Extractive summarization|Abstractive summarization|Transformer integration|Sentence scoring algorithms|Customizable summary length|Multi-document support"
-                    data-tech="Python|NLP|Transformers|BERT|spaCy|Hugging Face">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="material-symbols-outlined">summarize</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
-                                    <span class="material-symbols-outlined">open_in_full</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Automated Text Summarization</h3>
-                        <p>NLP-based system for automatic text summarization using extractive and abstractive techniques for document condensation.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>Transformers</span>
-                        </div>
-                    </div>
-                </article>
-                
+
                 <!-- Project 6: Digit Recognizer -->
                 <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.5s"
                     data-title="Digit Recognizer"
                     data-description="A Kaggle competition solution for the classic MNIST handwritten digit recognition challenge. The project implements a convolutional neural network architecture optimized for high accuracy digit classification. Includes data augmentation, batch normalization, and dropout for improved generalization."
-                    data-image="./resources/images/projects/digit-recognizer.jpg"
+                    data-image="./resources/images/projects/digit-recognizer.png"
                     data-icon="pin"
                     data-github="https://github.com/Shan-Vision05/Digit-Recognizer"
                     data-features="CNN architecture design|99%+ accuracy on MNIST|Data augmentation pipeline|Batch normalization layers|Dropout regularization|Kaggle submission ready"
                     data-tech="Python|TensorFlow|Keras|CNN|NumPy|Pandas">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="./resources/images/projects/digit-recognizer.png" alt="Digit Recognizer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <span class="material-symbols-outlined">pin</span>
                         </div>
                         <div class="project-overlay">
@@ -746,18 +754,19 @@
                     </div>
                 </article>
                 
-                <!-- Project 7: F1 Starting Grid (OpenGL) -->
-                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.6s"
-                    data-title="F1 Starting Grid"
-                    data-description="A 3D computer graphics project built with OpenGL, rendering a realistic Formula 1 starting grid scene. Features detailed car models, track surface textures, dynamic lighting, and camera controls for exploring the scene. Demonstrates fundamental concepts in real-time 3D rendering and graphics programming."
-                    data-image="./resources/images/projects/f1-grid.jpg"
-                    data-icon="sports_motorsports"
-                    data-github="https://github.com/Shan-Vision05/F1-Starting-Grid"
-                    data-features="3D car model rendering|Dynamic lighting system|Texture mapping|Camera movement controls|Track markings and details|Multiple viewing angles"
-                    data-tech="C|OpenGL|GLUT|3D Graphics|Linear Algebra">
+                <!-- Project 5: ATS - Automated Text Summarization -->
+                <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.4s"
+                    data-title="Automated Text Summarization"
+                    data-description="An advanced NLP system for automatic document summarization. The project implements both extractive and abstractive summarization techniques, using transformer-based models and traditional statistical methods to condense long documents while preserving key information and semantic meaning."
+                    data-image="./resources/images/projects/text-summarization.png"
+                    data-icon="summarize"
+                    data-github="https://github.com/Shan-Vision05/ATS"
+                    data-features="Extractive summarization|Abstractive summarization|Transformer integration|Sentence scoring algorithms|Customizable summary length|Multi-document support"
+                    data-tech="Python|NLP|Transformers|BERT|spaCy|Hugging Face">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="material-symbols-outlined">sports_motorsports</span>
+                        <img src="./resources/images/projects/text-summarization.png" alt="Automated Text Summarization" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
+                            <span class="material-symbols-outlined">summarize</span>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
@@ -768,18 +777,22 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>F1 Starting Grid</h3>
-                        <p>OpenGL demo rendering a 3D Formula 1 starting grid with detailed car models, track markings, and dynamic lighting effects.</p>
+                        <h3>Automated Text Summarization</h3>
+                        <p>NLP-based system for automatic text summarization using extractive and abstractive techniques for document condensation.</p>
                         <div class="project-tech">
-                            <span>C</span>
-                            <span>OpenGL</span>
-                            <span>3D Graphics</span>
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Transformers</span>
                         </div>
                     </div>
                 </article>
                 
+                
+                
+                
+                
                 <!-- Project 8: Customer Churn Pipeline -->
-                <article class="project-card reveal-up" data-category="ml" style="--delay: 0.7s"
+                <!-- <article class="project-card reveal-up" data-category="ml" style="--delay: 0.7s"
                     data-title="Customer Churn Prediction Pipeline"
                     data-description="An end-to-end machine learning pipeline for predicting customer churn in subscription-based businesses. The project covers the complete ML workflow from data preprocessing and feature engineering to model training, evaluation, and deployment. Implements multiple algorithms and provides interpretable predictions."
                     data-image="./resources/images/projects/churn-pipeline.jpg"
@@ -788,7 +801,8 @@
                     data-features="End-to-end ML pipeline|Feature engineering|Multiple model comparison|Hyperparameter tuning|Model interpretability|Deployment ready code"
                     data-tech="Python|scikit-learn|Pandas|XGBoost|MLOps|Docker">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="./resources/images/projects/churn-pipeline.jpg" alt="Customer Churn Pipeline" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <span class="material-symbols-outlined">trending_down</span>
                         </div>
                         <div class="project-overlay">
@@ -808,8 +822,8 @@
                             <span>MLOps</span>
                         </div>
                     </div>
-                </article>
-            </div>
+                </article> -->
+            </div> 
             
             <div class="projects-cta">
                 <a href="https://github.com/Shan-Vision05" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
@@ -1144,7 +1158,7 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2026 Shanmukha Vamshi. All rights reserved.</p>
-                <p>Designed & Built with <span class="heart">❤️</span> using HTML, CSS & JavaScript</p>
+                <p>Designed & Built with <span class="heart">❤️</span> using HTML, CSS & JavaScript and deployed on Hetzner</p>
             </div>
         </div>
     </footer>

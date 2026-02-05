@@ -251,9 +251,20 @@ function initProjectModal() {
     const modalOverlay = document.getElementById('project-modal-overlay');
     const modalClose = document.getElementById('project-modal-close');
     const modalCloseBtn = document.getElementById('modal-close-btn');
+    const githubLink = document.getElementById('modal-github-link');
     const projectCards = document.querySelectorAll('.project-card');
     
     if (!modal || !modalOverlay) return;
+    
+    // Make GitHub link work properly
+    githubLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const url = this.href;
+        if (url && url !== '#' && url !== window.location.href + '#') {
+            window.open(url, '_blank');
+        }
+    });
     
     // Category mapping for display
     const categoryMap = {
@@ -282,7 +293,11 @@ function initProjectModal() {
         document.getElementById('modal-title').textContent = data.title || 'Project';
         document.getElementById('modal-category').textContent = categoryMap[data.category] || data.category || 'Project';
         document.getElementById('modal-description').textContent = data.description || '';
-        document.getElementById('modal-github-link').href = data.github || '#';
+        
+        // Set GitHub link
+        const githubLink = document.getElementById('modal-github-link');
+        const githubUrl = data.github || '#';
+        githubLink.href = githubUrl;
         
         // Handle image
         const mainImage = document.getElementById('modal-main-image');
@@ -349,6 +364,14 @@ function initProjectModal() {
     modalClose.addEventListener('click', closeProjectModal);
     modalCloseBtn.addEventListener('click', closeProjectModal);
     modalOverlay.addEventListener('click', closeProjectModal);
+    
+    // Prevent modal content clicks from closing the modal, but allow links to work
+    modal.addEventListener('click', (e) => {
+        // Don't stop propagation for links - let them work normally
+        if (!e.target.closest('a')) {
+            e.stopPropagation();
+        }
+    });
     
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
