@@ -452,7 +452,7 @@ function initTestimonialSlider() {
 }
 
 /* =====================================================
-   TIMELINE TABS
+   TIMELINE TABS & ACCORDION
    ===================================================== */
 function initTimelineTabs() {
     const tabs = document.querySelectorAll('.timeline-tab');
@@ -481,8 +481,26 @@ function initTimelineTabs() {
             });
         });
     });
+    
+    // Accordion expand/collapse for timeline cards
+    document.querySelectorAll('.timeline-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const item = card.closest('.timeline-item');
+            const isActive = item.classList.contains('active');
+            
+            // Close all items in the same panel
+            const panel = item.closest('.timeline-panel');
+            if (panel) {
+                panel.querySelectorAll('.timeline-item').forEach(i => i.classList.remove('active'));
+            }
+            
+            // Toggle clicked item (if it wasn't already open)
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
 }
-
 /* =====================================================
    CONTACT FORM
    ===================================================== */
