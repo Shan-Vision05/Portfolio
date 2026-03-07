@@ -137,7 +137,7 @@
                             <span class="material-symbols-outlined">folder_open</span>
                             View Projects
                         </a>
-                        <a href="https://drive.google.com/file/d/17oMn517Gwwd0S5rcei8cAMZUZg3VsUFv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <a href="https://drive.google.com/file/d/17oMn517Gwwd0S5rcei8cAMZUZg3VsUFv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: none;">
                             <span class="material-symbols-outlined">description</span>
                             Resume
                         </a>
@@ -258,7 +258,7 @@
                         and production, building systems that are both technically rigorous and deployment-ready.
                     </p>
                     
-                    <a href="https://drive.google.com/file/d/17oMn517Gwwd0S5rcei8cAMZUZg3VsUFv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://drive.google.com/file/d/17oMn517Gwwd0S5rcei8cAMZUZg3VsUFv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: none;">
                         <span class="material-symbols-outlined">description</span>
                         Download Resume
                     </a>
@@ -673,20 +673,17 @@
                     </div>
                 </article>
 
-                <!-- Project 7: F1 Starting Grid (OpenGL) -->
-                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.6s"
-                    data-title="F1 Starting Grid"
-                    data-description="A 3D computer graphics project built with OpenGL, rendering a realistic Formula 1 starting grid scene. Features detailed car models, track surface textures, dynamic lighting, and camera controls for exploring the scene. Demonstrates fundamental concepts in real-time 3D rendering and graphics programming."
-                    data-image="./resources/images/projects/f1-grid.png"
-                    data-icon="sports_motorsports"
-                    data-github="https://github.com/Shan-Vision05/F1-Starting-Grid"
-                    data-features="3D car model rendering|Dynamic lighting system|Texture mapping|Camera movement controls|Track markings and details|Multiple viewing angles"
-                    data-tech="C|OpenGL|GLUT|3D Graphics|Linear Algebra">
-                    <div class="project-image">
-                        <img src="./resources/images/projects/f1-grid.png" alt="F1 Starting Grid" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <span class="material-symbols-outlined">sports_motorsports</span>
-                        </div>
+                <!-- Project 2: e-Yantra -->
+                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.1s"
+                    data-title="e-Yantra Warehouse Automation"
+                    data-description="Developed an automated warehouse sorting system using dual robotic arms for the e-Yantra robotics competition. The system orchestrates two robotic manipulators: one retrieves packages from shelves and places them onto a conveyor belt, while the second arm picks packages from the conveyor and sorts them into designated bins. Implements MQTT-based communication for coordinated control, OpenCV-based QR code detection for package identification, and ROS for real-time robot control and sensor integration. The system demonstrates autonomous warehouse automation with computer vision and multi-robot coordination."
+                    data-video="https://www.youtube.com/embed/ILlifypefPM?start=76"
+                    data-icon="precision_manufacturing"
+                    data-github="#"
+                    data-features="Dual robotic arm coordination|MQTT-based robot communication|QR code recognition with OpenCV|Conveyor belt integration|Automated package sorting|ROS-based control system|Real-time sensor fusion|Multi-robot task planning"
+                    data-tech="ROS|Python|OpenCV|MQTT|Computer Vision|Robotics|Image Processing|Embedded Systems|Linux|Serial Communication">
+                    <div class="project-image project-video-container">
+                        <iframe class="project-video" src="https://www.youtube.com/embed/ILlifypefPM?start=76" title="e-Yantra Warehouse Automation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <div class="project-overlay">
                             <div class="project-links">
                                 <span class="project-link view-project" aria-label="View Project Details" title="View Details">
@@ -696,18 +693,18 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>F1 Starting Grid</h3>
-                        <p>OpenGL demo rendering a 3D Formula 1 starting grid with detailed car models, track markings, and dynamic lighting effects.</p>
+                        <h3>e-Yantra Warehouse Automation</h3>
+                        <p>Dual robotic arm system for automated package sorting with MQTT communication, QR code recognition, and ROS-based control.</p>
                         <div class="project-tech">
-                            <span>C</span>
-                            <span>OpenGL</span>
-                            <span>3D Graphics</span>
+                            <span>ROS</span>
+                            <span>OpenCV</span>
+                            <span>MQTT</span>
                         </div>
                     </div>
                 </article>
-                
-                <!-- Project 2: Facial Emotion Recognition -->
-                <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.1s"
+
+                <!-- Project 3: Facial Emotion Recognition -->
+                <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.2s"
                     data-title="Facial Emotion Recognition"
                     data-description="A comprehensive deep learning solution for real-time facial emotion detection. The system uses advanced CNN architectures combined with transfer learning from pre-trained models to accurately classify seven distinct emotions from facial images. Optimized for real-time performance, it can process video streams and provide instant emotion feedback."
                     data-image="./resources/images/projects/emotion-recognition.png"
@@ -738,20 +735,20 @@
                         </div>
                     </div>
                 </article>
-                
-                <!-- Project 3: Sentiment Prediction -->
-                <!-- <article class="project-card reveal-up" data-category="nlp ml" style="--delay: 0.2s"
-                    data-title="Sentiment Analysis on Hotel Reviews"
-                    data-description="An NLP-powered sentiment analysis system trained on hotel review data to accurately classify customer feedback as positive or negative. The project implements various text preprocessing techniques, feature extraction methods including TF-IDF and word embeddings, and compares multiple classification algorithms to find the optimal model."
-                    data-image="./resources/images/projects/sentiment-analysis.jpg"
-                    data-icon="sentiment_satisfied"
-                    data-github="https://github.com/Shan-Vision05/Sentiment-Prediction-on-Hotel-Reviews"
-                    data-features="Logistic Regression classifier|TF-IDF feature extraction|Comprehensive text preprocessing|Cross-validation evaluation|High precision and recall|Scalable to large datasets"
-                    data-tech="Python|scikit-learn|NLTK|Pandas|NumPy|Matplotlib">
+
+                <!-- Project 4: Mars Rover -->
+                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.3s"
+                    data-title="Team Astra - Mars Rover Navigation"
+                    data-description="Led the development of an autonomous navigation system for a Mars rover competition. Built on NVIDIA Jetson TX2, the system integrates multiple sensors including GPS, magnetometer, and Kinect depth camera for robust outdoor traversal. Implemented real-time obstacle detection and avoidance using computer vision, optimized for embedded GPU constraints. The rover successfully navigated complex terrain using sensor fusion for accurate heading estimation and waypoint tracking."
+                    data-image="./resources/images/projects/mars-rover.jpg"
+                    data-icon="precision_manufacturing"
+                    data-github="#"
+                    data-features="Autonomous navigation on Jetson TX2|GPS and magnetometer integration|Kinect depth sensing|OpenCV obstacle detection|Sensor fusion for heading estimation|Waypoint tracking system"
+                    data-tech="ROS|OpenCV|Python|C++|Jetson TX2|Sensor Fusion">
                     <div class="project-image">
-                        <img src="./resources/images/projects/sentiment-analysis.jpg" alt="Sentiment Analysis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="./resources/images/projects/mars-rover.jpg" alt="Mars Rover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="project-placeholder" style="display: none;">
-                            <span class="material-symbols-outlined">sentiment_satisfied</span>
+                            <span class="material-symbols-outlined">precision_manufacturing</span>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
@@ -762,20 +759,84 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Sentiment Analysis</h3>
-                        <p>Logistic Regression model for hotel review sentiment prediction, classifying reviews as positive or negative with high accuracy.</p>
+                        <h3>Mars Rover Navigation</h3>
+                        <p>Autonomous navigation stack for Mars rover on Jetson TX2 with GPS, magnetometer, and Kinect depth sensing for outdoor traversal.</p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>scikit-learn</span>
-                            <span>NLP</span>
+                            <span>ROS</span>
+                            <span>OpenCV</span>
+                            <span>Jetson TX2</span>
                         </div>
                     </div>
-                </article> -->
+                </article>
 
-                
-                
-                <!-- Project 4: Text Predictor N-Gram -->
-                <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.3s"
+                <!-- Project 5: F1 Starting Grid (OpenGL) -->
+                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.4s"
+                    data-title="F1 Starting Grid"
+                    data-description="A 3D computer graphics project built with OpenGL, rendering a realistic Formula 1 starting grid scene. Features detailed car models, track surface textures, dynamic lighting, and camera controls for exploring the scene. Demonstrates fundamental concepts in real-time 3D rendering and graphics programming."
+                    data-image="./resources/images/projects/f1-grid.png"
+                    data-icon="sports_motorsports"
+                    data-github="https://github.com/Shan-Vision05/F1-Starting-Grid"
+                    data-features="3D car model rendering|Dynamic lighting system|Texture mapping|Camera movement controls|Track markings and details|Multiple viewing angles"
+                    data-tech="C|OpenGL|GLUT|3D Graphics|Linear Algebra">
+                    <div class="project-image">
+                        <img src="./resources/images/projects/f1-grid.png" alt="F1 Starting Grid" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
+                            <span class="material-symbols-outlined">sports_motorsports</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
+                                    <span class="material-symbols-outlined">open_in_full</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>F1 Starting Grid</h3>
+                        <p>OpenGL demo rendering a 3D Formula 1 starting grid with detailed car models, track markings, and dynamic lighting effects.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>OpenGL</span>
+                            <span>3D Graphics</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: ATS - Automated Text Summarization -->
+                <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.5s"
+                    data-title="Automated Text Summarization"
+                    data-description="An advanced NLP system for automatic document summarization. The project implements both extractive and abstractive summarization techniques, using transformer-based models and traditional statistical methods to condense long documents while preserving key information and semantic meaning."
+                    data-image="./resources/images/projects/text-summarization.png"
+                    data-icon="summarize"
+                    data-github="https://github.com/Shan-Vision05/ATS"
+                    data-features="Extractive summarization|Abstractive summarization|Transformer integration|Sentence scoring algorithms|Customizable summary length|Multi-document support"
+                    data-tech="Python|NLP|Transformers|BERT|spaCy|Hugging Face">
+                    <div class="project-image">
+                        <img src="./resources/images/projects/text-summarization.png" alt="Automated Text Summarization" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
+                            <span class="material-symbols-outlined">summarize</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
+                                    <span class="material-symbols-outlined">open_in_full</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Automated Text Summarization</h3>
+                        <p>NLP-based system for automatic text summarization using extractive and abstractive techniques for document condensation.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Transformers</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: Text Predictor N-Gram -->
+                <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.6s"
                     data-title="Text Predictor N-Gram"
                     data-description="A natural language processing project implementing statistical language models for text prediction. The system uses bigram and trigram models built from NLTK corpus data to predict the next word in a sequence. It demonstrates fundamental concepts in computational linguistics and probabilistic text generation."
                     data-image="./resources/images/projects/text-predictor.png"
@@ -807,8 +868,8 @@
                     </div>
                 </article>
 
-                <!-- Project 6: Digit Recognizer -->
-                <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.5s"
+                <!-- Project 8: Digit Recognizer -->
+                <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.7s"
                     data-title="Digit Recognizer"
                     data-description="A Kaggle competition solution for the classic MNIST handwritten digit recognition challenge. The project implements a convolutional neural network architecture optimized for high accuracy digit classification. Includes data augmentation, batch normalization, and dropout for improved generalization."
                     data-image="./resources/images/projects/digit-recognizer.png"
@@ -836,105 +897,6 @@
                             <span>Python</span>
                             <span>TensorFlow</span>
                             <span>CNN</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 5: ATS - Automated Text Summarization -->
-                <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.4s"
-                    data-title="Automated Text Summarization"
-                    data-description="An advanced NLP system for automatic document summarization. The project implements both extractive and abstractive summarization techniques, using transformer-based models and traditional statistical methods to condense long documents while preserving key information and semantic meaning."
-                    data-image="./resources/images/projects/text-summarization.png"
-                    data-icon="summarize"
-                    data-github="https://github.com/Shan-Vision05/ATS"
-                    data-features="Extractive summarization|Abstractive summarization|Transformer integration|Sentence scoring algorithms|Customizable summary length|Multi-document support"
-                    data-tech="Python|NLP|Transformers|BERT|spaCy|Hugging Face">
-                    <div class="project-image">
-                        <img src="./resources/images/projects/text-summarization.png" alt="Automated Text Summarization" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <span class="material-symbols-outlined">summarize</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
-                                    <span class="material-symbols-outlined">open_in_full</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Automated Text Summarization</h3>
-                        <p>NLP-based system for automatic text summarization using extractive and abstractive techniques for document condensation.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>Transformers</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 7: Team Astra - Mars Rover -->
-                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.7s"
-                    data-title="Team Astra - Mars Rover Navigation"
-                    data-description="Led the development of an autonomous navigation system for a Mars rover competition. Built on NVIDIA Jetson TX2, the system integrates multiple sensors including GPS, magnetometer, and Kinect depth camera for robust outdoor traversal. Implemented real-time obstacle detection and avoidance using computer vision, optimized for embedded GPU constraints. The rover successfully navigated complex terrain using sensor fusion for accurate heading estimation and waypoint tracking."
-                    data-image="./resources/images/projects/mars-rover.jpg"
-                    data-icon="precision_manufacturing"
-                    data-github="#"
-                    data-features="Autonomous navigation on Jetson TX2|GPS and magnetometer integration|Kinect depth sensing|OpenCV obstacle detection|Sensor fusion for heading estimation|Waypoint tracking system"
-                    data-tech="ROS|OpenCV|Python|C++|Jetson TX2|Sensor Fusion">
-                    <div class="project-image">
-                        <img src="./resources/images/projects/mars-rover.jpg" alt="Mars Rover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <span class="material-symbols-outlined">precision_manufacturing</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
-                                    <span class="material-symbols-outlined">open_in_full</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Mars Rover Navigation</h3>
-                        <p>Autonomous navigation stack for Mars rover on Jetson TX2 with GPS, magnetometer, and Kinect depth sensing for outdoor traversal.</p>
-                        <div class="project-tech">
-                            <span>ROS</span>
-                            <span>OpenCV</span>
-                            <span>Jetson TX2</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 8: e-Yantra -->
-                <article class="project-card reveal-up" data-category="cv" style="--delay: 0.8s"
-                    data-title="e-Yantra Robotics Competition"
-                    data-description="[Add your e-Yantra project description here - competition details, robot design, tasks completed, technologies used, and achievements]"
-                    data-image="./resources/images/projects/eyantra.jpg"
-                    data-icon="smart_toy"
-                    data-github="#"
-                    data-features="[Feature 1]|[Feature 2]|[Feature 3]|[Feature 4]|[Feature 5]|[Feature 6]"
-                    data-tech="ROS|Python|OpenCV|Embedded Systems">
-                    <div class="project-image">
-                        <img src="./resources/images/projects/eyantra.jpg" alt="e-Yantra" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <span class="material-symbols-outlined">smart_toy</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
-                                    <span class="material-symbols-outlined">open_in_full</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>e-Yantra Robotics</h3>
-                        <p>[Add brief description of e-Yantra project - will be updated with your details]</p>
-                        <div class="project-tech">
-                            <span>ROS</span>
-                            <span>Python</span>
-                            <span>OpenCV</span>
                         </div>
                     </div>
                 </article>
@@ -993,6 +955,7 @@
         <div class="project-modal-content">
             <div class="project-modal-images">
                 <img id="modal-main-image" src="" alt="Project Image">
+                <iframe id="modal-main-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: none; width: 100%; height: 100%; border: none;"></iframe>
                 <div class="image-placeholder" id="modal-image-placeholder">
                     <span class="material-symbols-outlined" id="modal-placeholder-icon">image</span>
                 </div>

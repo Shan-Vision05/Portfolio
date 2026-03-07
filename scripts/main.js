@@ -257,14 +257,16 @@ function initProjectModal() {
     if (!modal || !modalOverlay) return;
     
     // Make GitHub link work properly
-    githubLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const url = this.href;
-        if (url && url !== '#' && url !== window.location.href + '#') {
-            window.open(url, '_blank');
-        }
-    });
+    if (githubLink) {
+        githubLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const url = this.href;
+            if (url && url !== '#' && url !== window.location.href + '#') {
+                window.open(url, '_blank');
+            }
+        });
+    }
     
     // Category mapping for display
     const categoryMap = {
@@ -299,29 +301,45 @@ function initProjectModal() {
         const githubUrl = data.github || '#';
         githubLink.href = githubUrl;
         
-        // Handle image
+        // Handle image or video
         const mainImage = document.getElementById('modal-main-image');
+        const mainVideo = document.getElementById('modal-main-video');
         const imagePlaceholder = document.getElementById('modal-image-placeholder');
         const placeholderIcon = document.getElementById('modal-placeholder-icon');
         
-        if (data.image && data.image !== 'undefined') {
+        // Check if this project has a video
+        if (data.video && data.video !== 'undefined') {
+            // Show video, hide image and placeholder
+            if (mainVideo) {
+                mainVideo.src = data.video;
+                mainVideo.style.display = 'block';
+            }
+            if (mainImage) mainImage.style.display = 'none';
+            if (imagePlaceholder) imagePlaceholder.style.display = 'none';
+        } else if (data.image && data.image !== 'undefined') {
             // Try to load image
+            if (mainVideo) mainVideo.style.display = 'none';
             const img = new Image();
             img.onload = function() {
                 mainImage.src = data.image;
                 mainImage.style.display = 'block';
-                imagePlaceholder.style.display = 'none';
+                if (imagePlaceholder) imagePlaceholder.style.display = 'none';
             };
             img.onerror = function() {
                 mainImage.style.display = 'none';
-                imagePlaceholder.style.display = 'flex';
-                placeholderIcon.textContent = data.icon || 'image';
+                if (imagePlaceholder) {
+                    imagePlaceholder.style.display = 'flex';
+                    if (placeholderIcon) placeholderIcon.textContent = data.icon || 'image';
+                }
             };
             img.src = data.image;
         } else {
-            mainImage.style.display = 'none';
-            imagePlaceholder.style.display = 'flex';
-            placeholderIcon.textContent = data.icon || 'image';
+            if (mainImage) mainImage.style.display = 'none';
+            if (mainVideo) mainVideo.style.display = 'none';
+            if (imagePlaceholder) {
+                imagePlaceholder.style.display = 'flex';
+                if (placeholderIcon) placeholderIcon.textContent = data.icon || 'image';
+            }
         }
         
         // Populate features
@@ -358,11 +376,17 @@ function initProjectModal() {
         modal.classList.remove('active');
         modalOverlay.classList.remove('active');
         document.body.style.overflow = 'auto';
+        
+        // Stop video playback if video is present
+        const mainVideo = document.getElementById('modal-main-video');
+        if (mainVideo && mainVideo.src) {
+            mainVideo.src = '';
+        }
     }
     
     // Close modal events
     modalClose.addEventListener('click', closeProjectModal);
-    modalCloseBtn.addEventListener('click', closeProjectModal);
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeProjectModal);
     modalOverlay.addEventListener('click', closeProjectModal);
     
     // Prevent modal content clicks from closing the modal, but allow links to work
@@ -379,17 +403,6 @@ function initProjectModal() {
             closeProjectModal();
         }
     });
-    
-    // Close on scroll (when modal is active)
-    let scrollTimeout;
-    window.addEventListener('scroll', () => {
-        if (modal.classList.contains('active')) {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                closeProjectModal();
-            }, 100);
-        }
-    }, { passive: true });
 }
 
 /* =====================================================
