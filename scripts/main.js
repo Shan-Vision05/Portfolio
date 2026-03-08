@@ -42,12 +42,12 @@ function initThemeToggle() {
     const toggle = document.getElementById('theme-toggle');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
     
-    // Check for saved preference or system preference
+    // Check for saved preference; default is light theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (prefersDark.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
     }
     
     if (toggle) {
