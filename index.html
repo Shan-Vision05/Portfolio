@@ -185,7 +185,7 @@
             </div>
 
             <!-- Stats Section -->
-            <div class="hero-stats">
+            <!-- <div class="hero-stats">
                 <div class="stat-item">
                     <div class="stat-number" data-count="3">0</div>
                     <div class="stat-label">Years Experience</div>
@@ -202,7 +202,7 @@
                     <div class="stat-number" data-count="4">0</div>
                     <div class="stat-label">Organizations</div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Scroll Indicator -->
             <div class="scroll-indicator">
@@ -647,7 +647,45 @@
             -->
             
             <div class="projects-grid">
-                <!-- Project 1: Visual Grounding -->
+                <!-- Project 1: pWin.ai - Podcast Script Generation -->
+                <article class="project-card reveal-up" data-category="nlp ml"
+                    data-title="pWin.ai - AI-Powered Podcast Script Generation"
+                    data-description="Built a production-ready GenAI platform for podcast script generation at pWin.ai. Developed a Vision-Language Document AI pipeline with structured parsing that increased document extraction accuracy to 95% and layout detection F1 to 0.80. Architected a LangGraph-based multi-agent LLM system with RAG-based grounding using vector embeddings in SurrealDB, reducing hallucinations by 40%. Implemented citation validation and transcript scoring to ensure content reliability. Deployed a Dockerized platform with FastAPI supporting real-time SSE streaming inference and async orchestration."
+                    data-video="https://www.youtube.com/embed/Iiqq6UGssME"
+                    data-icon="podcasts"
+                    data-demo="https://pwinbook.com"
+                    data-github="https://github.com/pWinAI-Boulder-Capstone/Pwinbook"
+                    data-features="95% document extraction accuracy|Vision-Language Document AI pipeline|LangGraph multi-agent LLM system|40% reduction in hallucinations|RAG with SurrealDB vector database|Citation validation & transcript scoring|Real-time SSE streaming inference|Dockerized FastAPI platform|Structured Pydantic outputs|PDF-to-image preprocessing"
+                    data-tech="LangGraph|FastAPI|SurrealDB|RAG|Pydantic|Docker|Computer Vision|NLP|LLM|Vector Embeddings">
+                    <div class="project-image project-video-container">
+                        <iframe class="project-video" src="https://www.youtube.com/embed/Iiqq6UGssME" title="pWin.ai Podcast Generation Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://pwinbook.com" class="project-link" target="_blank" rel="noopener" aria-label="Visit pwinbook.com" title="View Live Demo">
+                                    <span class="material-symbols-outlined">open_in_new</span>
+                                </a>
+                                <a href="https://github.com/pWinAI-Boulder-Capstone/Pwinbook" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub" title="View Code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <span class="project-link view-project" aria-label="View Project Details" title="View Details">
+                                    <span class="material-symbols-outlined">open_in_full</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>pWin.ai - Podcast Script Generation</h3>
+                        <p>Production GenAI platform with Vision-Language Document AI, multi-agent LLM system, and RAG-based grounding achieving 95% extraction accuracy.</p>
+                        <div class="project-tech">
+                            <span>LangGraph</span>
+                            <span>RAG</span>
+                            <span>FastAPI</span>
+                            <span>SurrealDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Visual Grounding -->
                 <article class="project-card reveal-up" data-category="cv nlp"
                     data-title="Language Guided Visual Grounding"
                     data-description="A modular visual grounding model combining Faster R-CNN based region proposals with co-attention driven, multi-step reasoning over attributes, spatial relations, and object interactions. The system demonstrates efficient learning by achieving state-of-the-art performance using only a fraction of the available training data, showcasing the power of attention mechanisms in multimodal AI."
@@ -663,6 +701,9 @@
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
+                                <a href="https://github.com/Shan-Vision05/Visual-Grounding" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub" title="View Code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
                                 <span class="project-link view-project" aria-label="View Project Details" title="View Details">
                                     <span class="material-symbols-outlined">open_in_full</span>
                                 </span>
@@ -680,7 +721,7 @@
                     </div>
                 </article>
 
-                <!-- Project 2: e-Yantra -->
+                <!-- Project 3: e-Yantra -->
                 <article class="project-card reveal-up" data-category="cv" style="--delay: 0.1s"
                     data-title="e-Yantra Warehouse Automation"
                     data-description="Developed an automated warehouse sorting system using dual robotic arms for the e-Yantra robotics competition. The system orchestrates two robotic manipulators: one retrieves packages from shelves and places them onto a conveyor belt, while the second arm picks packages from the conveyor and sorts them into designated bins. Implements MQTT-based communication for coordinated control, OpenCV-based QR code detection for package identification, and ROS for real-time robot control and sensor integration. The system demonstrates autonomous warehouse automation with computer vision and multi-robot coordination."
@@ -710,7 +751,7 @@
                     </div>
                 </article>
 
-                <!-- Project 3: Facial Emotion Recognition (hidden) -->
+                <!-- Project 4: Facial Emotion Recognition (hidden) -->
                 <!-- <article class="project-card reveal-up" data-category="cv ml" style="--delay: 0.2s"
                     data-title="Facial Emotion Recognition"
                     data-description="A comprehensive deep learning solution for real-time facial emotion detection. The system uses advanced CNN architectures combined with transfer learning from pre-trained models to accurately classify seven distinct emotions from facial images. Optimized for real-time performance, it can process video streams and provide instant emotion feedback."
@@ -743,7 +784,7 @@
                     </div>
                 </article> -->
 
-                <!-- Project 4: Mars Rover -->
+                <!-- Project 5: Mars Rover -->
                 <article class="project-card reveal-up" data-category="cv" style="--delay: 0.3s"
                     data-title="Team Astra - Mars Rover Navigation"
                     data-description="Led the development of an autonomous navigation system for a Mars rover competition. Built on NVIDIA Jetson TX2, the system integrates multiple sensors including GPS, magnetometer, and Kinect depth camera for robust outdoor traversal. Implemented real-time obstacle detection and avoidance using computer vision, optimized for embedded GPU constraints. The rover successfully navigated complex terrain using sensor fusion for accurate heading estimation and waypoint tracking."
@@ -776,7 +817,7 @@
                     </div>
                 </article>
 
-                <!-- Project 5: F1 Starting Grid (OpenGL) -->
+                <!-- Project 6: F1 Starting Grid (OpenGL) -->
                 <article class="project-card reveal-up" data-category="cv" style="--delay: 0.4s"
                     data-title="F1 Starting Grid"
                     data-description="A 3D computer graphics project built with OpenGL, rendering a realistic Formula 1 starting grid scene. Features detailed car models, track surface textures, dynamic lighting, and camera controls for exploring the scene. Demonstrates fundamental concepts in real-time 3D rendering and graphics programming."
@@ -792,6 +833,9 @@
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
+                                <a href="https://github.com/Shan-Vision05/F1-Starting-Grid" class="project-link" target="_blank" rel="noopener" aria-label="View on GitHub" title="View Code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
                                 <span class="project-link view-project" aria-label="View Project Details" title="View Details">
                                     <span class="material-symbols-outlined">open_in_full</span>
                                 </span>
@@ -809,7 +853,7 @@
                     </div>
                 </article>
 
-                <!-- Project 6: ATS - Automated Text Summarization (hidden) -->
+                <!-- Project 7: ATS - Automated Text Summarization (hidden) -->
                 <!-- <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.5s"
                     data-title="Automated Text Summarization"
                     data-description="An advanced NLP system for automatic document summarization. The project implements both extractive and abstractive summarization techniques, using transformer-based models and traditional statistical methods to condense long documents while preserving key information and semantic meaning."
@@ -842,7 +886,7 @@
                     </div>
                 </article> -->
 
-                <!-- Project 7: Text Predictor N-Gram (hidden) -->
+                <!-- Project 8: Text Predictor N-Gram (hidden) -->
                 <!-- <article class="project-card reveal-up" data-category="nlp" style="--delay: 0.6s"
                     data-title="Text Predictor N-Gram"
                     data-description="A natural language processing project implementing statistical language models for text prediction. The system uses bigram and trigram models built from NLTK corpus data to predict the next word in a sequence. It demonstrates fundamental concepts in computational linguistics and probabilistic text generation."
