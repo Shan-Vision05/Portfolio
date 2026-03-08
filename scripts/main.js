@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectFilters();
     initTestimonialSlider();
     initTimelineTabs();
-    initContactForm();
     initBackToTop();
     initCounterAnimation();
     initProgressBars();
@@ -515,49 +514,23 @@ function initTimelineTabs() {
     });
 }
 /* =====================================================
-   CONTACT FORM
+   CONTACT EMAIL COPY
    ===================================================== */
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    
-    if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Create mailto link with form data
-        const mailtoEmail = 'shanmukha.vamshi.k@gmail.com';
-        const mailtoSubject = encodeURIComponent(`[Portfolio] ${subject}`);
-        const mailtoBody = encodeURIComponent(
-            `Name: ${name}\n` +
-            `Email: ${email}\n\n` +
-            `Message:\n${message}`
-        );
-        
-        const mailtoLink = `mailto:${mailtoEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Show success feedback
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Opening Email...';
-        submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-        
-        // Reset button after 3 seconds
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.style.background = '';
-            form.reset();
-        }, 3000);
-    });
+function copyContactEmail() {
+    const email = 'shanmukha.vamshi.k@gmail.com';
+    const label = document.getElementById('contactCopyLabel');
+    const originalHTML = label.innerHTML;
+
+    function markCopied() {
+        label.innerHTML = '<span class="material-symbols-outlined" style="font-size:16px">check</span> Copied!';
+        setTimeout(() => { label.innerHTML = originalHTML; }, 2000);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(markCopied).catch(() => fallbackCopy(email, markCopied));
+    } else {
+        fallbackCopy(email, markCopied);
+    }
 }
 
 /* =====================================================
