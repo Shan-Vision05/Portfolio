@@ -1391,6 +1391,15 @@ ul, ol {
 }
 
 /* Override container width for projects section */
+#projects-section {
+    min-height: auto;
+    padding: var(--space-16) 0;
+}
+
+#projects-section .section-header {
+    margin-bottom: var(--space-10);
+}
+
 #projects-section .container {
     max-width: 100%;
     padding: 5%;
