@@ -715,3 +715,35 @@ if (prefersReducedMotion.matches) {
    ===================================================== */
 console.log('%c👋 Hello, fellow developer!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
 console.log('%cInterested in the code? Check out the repo: https://github.com/Shan-Vision05/Portfolio', 'font-size: 14px; color: #64748b;');
+
+/* =====================================================
+   COPY EMAIL
+   ===================================================== */
+function copyHeroEmail() {
+    const email = 'shanmukha.vamshi.k@gmail.com';
+    const btn = document.getElementById('emailCopyBtn');
+
+    function markCopied() {
+        btn.classList.add('copied');
+        setTimeout(() => btn.classList.remove('copied'), 2000);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(markCopied).catch(() => fallbackCopy(email, markCopied));
+    } else {
+        fallbackCopy(email, markCopied);
+    }
+}
+
+function fallbackCopy(text, callback) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    el.style.position = 'fixed';
+    el.style.opacity = '0';
+    document.body.appendChild(el);
+    el.focus();
+    el.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(el);
+    callback();
+}
